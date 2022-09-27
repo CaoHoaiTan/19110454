@@ -29,7 +29,6 @@ function checkMember(newMember) {
 
 // [POST] add member to mygroup
 function addMember(req, res) {
-    console.log('add member to mygroup');
     const newMember = req.body;
     if (checkMember(newMember) == true) {
         mygroup.push(newMember);
@@ -42,7 +41,7 @@ function addMember(req, res) {
 }
 
 function solutionMessage(ID) {
-    const member = mygroup.filter(member => member.id == id);
+    const member = mygroup.filter(member => member.id == ID);
     if (member.length > 0) {
         return `<html><body><ul><li>${member[0].name}</li></ul></body></html>`
     } else {

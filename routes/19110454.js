@@ -4,6 +4,6 @@ const router = express.Router();
 
 
 router.get('/:id', getMember);
-router.post('/', addMember);
+router.post('/:id', addMember);
 
 module.exports = router
